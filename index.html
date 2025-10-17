@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zafiro Store</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+        <div class="logo-container">
+            <img src="imagenes/zarifo  logo.png" alt="Logo Zafiro Store" class="logo">
+            <h1 class="store-name">Zafiro Store</h1>
+        </div>
+     <nav>
+      <ul>
+        <li><a href="#vision">Visión</a></li>
+        <li><a href="#mision">Misión</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+     </nav>
+  </header>
+
+  <section id="productos" class="productos">
+    <h2>Camisas Chunky</h2>
+    <div class="carrusel-container">
+      <button class="carrusel-btn prev" onclick="moverCarrusel('camisas', -1)">&#10094;</button>
+      <div class="carrusel" id="camisas">
+        <div class="tarjeta">
+          <img src="imagenes/camisa1.webp" alt="Camisa Oversize Zafiro">
+          <h3>Camisa y2k</h3>
+          <p>$23.99</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imagenes/camisa2.jpg" alt="Camisa Denim Chunky">
+          <h3>Camisa Denim Chunky</h3>
+          <p>$24.99</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imagenes/camisa3.avif" alt="Camisa Street Classic">
+          <h3>Camisa retro y2k Azul</h3>
+          <p>$21.99</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imagenes/camisa4.jpg" alt="Camisa Black Edition">
+          <h3>Camisa black woman</h3>
+          <p>$26.50</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imagenes/camisa5.avif" alt="Camisa Azul Royal">
+          <h3>Camisa retro white</h3>
+          <p>$28.90</p>
+      <button class="agregar-btn">Agregar al carrito</button>
+
+        </div>
+        <div class="tarjeta">
+          <img src="imagenes/camisa6.webp" alt="Camisa Celeste Urbana">
+          <h3>Camisa black y2k</h3>
+          <p>$25.99</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+      </div>
+      <button class="carrusel-btn next" onclick="moverCarrusel('camisas', 1)">&#10095;</button>
+    </div>
+
+    <h2>Pantalones Chunky</h2>
+    <div class="carrusel-container">
+      <button class="carrusel-btn prev" onclick="moverCarrusel('pantalones', -1)">&#10094;</button>
+      <div class="carrusel" id="pantalones">
+        <div class="tarjeta">
+          <img src="imagenes/ckunky 1.jpg" alt="">
+          <h3>MEOKIM pantalon</h3>
+          <p>$24.50</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imagenes/chunky3.jpeg" alt="">
+          <h3>pantalon hip hop</h3>
+          <p>$21.50</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imagenes/chunky4.jpg" alt="">
+          <h3>Pantalón Ethbox</h3>
+          <p>$27.90</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imagenes/chunky5.jpg" alt="">
+          <h3>Pantalón QBO</h3>
+          <p>$23.90</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imagenes/chunky6.jpeg" alt="">
+          <h3>Pantalón Vintage</h3>
+          <p>$21.90</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+        <div class="tarjeta">
+          <img src="imagenes/chunky7.webp" alt="">
+          <h3>Pantalón Skull Wings</h3>
+          <p>$23.43</p>
+          <button class="agregar-btn">Agregar al carrito</button>
+        </div>
+      </div>
+      <button class="carrusel-btn next" onclick="moverCarrusel('pantalones', 1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="vision" class="info-card">
+    <h2>Visión</h2>
+    <p>Ser la marca líder en moda chunky en el salvador, ofreciendo prendas con estilo, calidad y comodidad a un buen precio y diseños de los mas geniales que han visto</p>
+  </section>
+
+  <section id="mision" class="info-card">
+    <h2>Misión</h2>
+    <p>Brindar a nuestros clientes ropa moderna y urbana con diseños únicos que reflejen autenticidad y confianza al caminar por las calles, no solo eso tambien darles los mejores precios y productos de buena calidad</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto y Reserva</h2>
+    <form>
+      <label>Nombre:</label>
+      <input type="text" required>
+      <label>Email:</label>
+      <input type="email" required>
+      <label>describe tu problema:</label>
+      <input type="descripcion" required>
+      <button type="submit">enviar</button>
+    </form>
+  <div class="carrito">
+    <h3>Tu carrito</h3>
+    <ul id="listaCarrito"></ul>
+    <p id="totalCarrito">Total: $0.00</p>
+    <button id="vaciarCarrito">Vaciar Carrito</button>
+  </div>
+  
+
+</section>
+
+  <footer>
+    <p>&copy; 2025 Zafiro Store - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
