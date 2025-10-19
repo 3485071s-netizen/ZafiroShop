@@ -14,8 +14,19 @@ const vaciarCarrito = document.getElementById("vaciarCarrito");
 
 document.querySelectorAll(".agregar-btn").forEach(btn => {
   btn.addEventListener("click", e => {
+    // Encuentra el contenedor de la tarjeta más cercano al botón
     const card = e.target.closest(".tarjeta");
+
+    // Extrae el texto del título (h3) dentro de esa tarjeta
+    const titulo = card.querySelector("h3").textContent;
+
+    // Extrae el texto del precio (p), quita el símbolo '$' y lo convierte a un número
+    const precio = parseFloat(card.querySelector("p").textContent.replace('$', ''));
+
+    // Agrega el objeto con la información correcta al carrito
     carrito.push({ titulo, precio });
+    
+    // Actualiza la visualización del carrito
     actualizarCarrito();
   });
 });
